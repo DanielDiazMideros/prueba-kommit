@@ -5,7 +5,7 @@ class DoublyLinkedList {
     this.length = 0;
   }
 
-  static #Node(value) {
+  static Node(value) {
     return { value, next: null, prev: null };
   }
 
@@ -46,7 +46,7 @@ class DoublyLinkedList {
   }
 
   appendHead(node) {
-    const node = DoublyLinkedList.#Node(value);
+    const node = DoublyLinkedList.Node(value);
     if (!this.head) {
       this.head = this.tail = node;
     } else {
@@ -59,7 +59,7 @@ class DoublyLinkedList {
   }
 
   appendTail(value) {
-    const node = DoublyLinkedList.#Node(value);
+    const node = DoublyLinkedList.Node(value);
     if (!this.tail) {
       this.head = this.tail = node;
     } else {
